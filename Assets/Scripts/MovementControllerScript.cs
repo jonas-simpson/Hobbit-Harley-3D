@@ -6,7 +6,7 @@ public class MovementControllerScript : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
     [SerializeField] GameObject teleporters;
-    [SerializeField] GameObject oops;
+    [SerializeField] GameObject teleporterDirections;
 
     [SerializeField] float movementSpeed = 1.0f;
 
@@ -18,6 +18,7 @@ public class MovementControllerScript : MonoBehaviour
     public bool fulfilledTest = false;
     public bool startTest = false;
     public bool startTeleportationTest = false;
+    public bool startCrossRoad = false;
 
     private UITaskController myUIController;
 
@@ -45,9 +46,16 @@ public class MovementControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerTransform.position = Vector3.MoveTowards(playerTransform.position, WayPoints[currentTargetPos].position, movementSpeed * Time.deltaTime);
+        if (startCrossRoad)
+        {
+            currentTargetPos = 2;
+            playerTransform.position = Vector3.MoveTowards(playerTransform.position, WayPoints[2].position, movementSpeed * Time.deltaTime);
+        } else
+        {
+            playerTransform.position = Vector3.MoveTowards(playerTransform.position, WayPoints[currentTargetPos].position, movementSpeed * Time.deltaTime);
 
-        updateTargetPosition();
+            updateTargetPosition();
+        }
     }
 
     void updateTargetPosition()
@@ -63,10 +71,10 @@ public class MovementControllerScript : MonoBehaviour
 
             if (currentTargetPos == 1) //for now stays at this step forever (at sidewalk about to cross)
             {
-                oops.SetActive(true);
+                teleporterDirections.SetActive(true);
                 StartCoroutine(waitForBall());
-                
             }
+
             
             else if (fulfilledTest)
             {
@@ -95,6 +103,7 @@ public class MovementControllerScript : MonoBehaviour
         }
     }
 
+
     public void setStartTestFalse()
     {
         startTest = false;
@@ -114,8 +123,8 @@ public class MovementControllerScript : MonoBehaviour
 
     IEnumerator waitForBall()
     {
-        yield return new WaitForSeconds(5);
-        oops.SetActive(false);
+        yield return new WaitForSeconds(10);
+        teleporterDirections.SetActive(false);
         this.enabled = false;
         teleporters.gameObject.SetActive(true);
     }

@@ -17,6 +17,12 @@ public class TeleportersActive : MonoBehaviour
     private TeleporterController teleporterController4;
     private TeleporterController teleporterControllerOG;
 
+    [SerializeField] GameObject instructions;
+    [SerializeField] Camera playerCamera;
+    [SerializeField] GameObject leftHalo;
+    [SerializeField] GameObject rightHalo;
+    [SerializeField] GameObject lookTarget;
+
     public bool atSidewalk;
     private bool materialChanged;
     private bool materialChanged2;
@@ -154,24 +160,24 @@ public class TeleportersActive : MonoBehaviour
 
         else if (teleporterController3.activated && teleporterController3.readyToContinue)
         {
-            materialChanged = false;
-            if (atSidewalk)
-            {
-                teleporterController3.done = true;
-                teleporterController3.GetComponent<MeshRenderer>().material = teleporterController3.inactiveMaterial;
-                teleporterController3.activated = false;
-                teleporterController3.readyToContinue = false;
-            }
+            teleporterController3.GetComponent<MeshRenderer>().material = teleporterController3.inactiveMaterial;
+            teleporterController3.activated = false;
+            teleporterControllerOG.GetComponent<MeshRenderer>().material = teleporterControllerOG.inactiveMaterial;
+            teleporterControllerOG.activated = false;
+            teleporterController3.readyToContinue = false;
+            teleporterController3.done = true;
         }
 
         else if (allDone)
         {
-            teleporterControllerOG.feedback_text.GetComponentInChildren<Text>().text = "Choose the correct location to stand to safely cross the road.";
+            //look left, look right, look left
+            instructions.GetComponentInChildren<Text>().text = "Now, look left, right, and left again to check for cars. \nBe sure to make eye contact and wave to the driver before crossing!";
+            instructions.SetActive(true);
+            leftHalo.SetActive(true);
+            rightHalo.SetActive(true);
+            lookTarget.SetActive(true);
         }
        
     }
-    IEnumerator wait()
-    {
-        yield return new WaitForSeconds(2);
-    }
+
 }
