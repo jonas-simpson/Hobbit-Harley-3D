@@ -17,6 +17,8 @@ public class OppositeTeleportersActive : MonoBehaviour
     [SerializeField] GameObject teleporterC;
     [SerializeField] GameObject teleporterD;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,14 +50,12 @@ public class OppositeTeleportersActive : MonoBehaviour
 
     IEnumerator activateTeleporters()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(6);
         instructions.SetActive(false);
         teleporterA.SetActive(true);
         teleporterB.SetActive(true);
         teleporterC.SetActive(true);
         teleporterD.SetActive(true);
         this.gameObject.SetActive(false);
-        
-
     }
 }

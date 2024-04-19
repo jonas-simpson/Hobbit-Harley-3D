@@ -6793,12 +6793,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeMaterial: {fileID: 2100000, guid: 8f9269d6d328e4f44942b7b44ab6f9f7, type: 2}
   hoverMaterial: {fileID: 2100000, guid: 1837e7f8b84912848b5de8c954d86869, type: 2}
+  activated: 1
+  allOppositeTeleporters: {fileID: 400557239}
   feedback_text: {fileID: 317026941}
+  instructions: {fileID: 1753136317}
   all_texts:
   - {fileID: 1695366433}
   - {fileID: 1331144537}
   - {fileID: 317026941}
   - {fileID: 1842550996}
+  playerTransform: {fileID: 9087440431407959930}
+  myMovementController: {fileID: 125686508}
 --- !u!1001 &191350411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13545,6 +13550,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400557238}
+  - component: {fileID: 400557239}
   m_Layer: 0
   m_Name: OppositeTeleporters
   m_TagString: Untagged
@@ -13570,6 +13576,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &400557239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400557237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84fcf747a1eb0f149b0d7811c8071847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tA: {fileID: 1327387972}
+  tB: {fileID: 667445645}
+  tC: {fileID: 185301536}
+  tD: {fileID: 1451005979}
+  choseCorrectly: 0
 --- !u!4 &403052446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d12e4588734a44b42878ee115f593aef, type: 3}
@@ -17170,6 +17193,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a1f157dce88f90a4b834834877310700, type: 3}
   m_PrefabInstance: {fileID: 866569176}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &509376121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509376122}
+  - component: {fileID: 509376124}
+  - component: {fileID: 509376123}
+  m_Layer: 5
+  m_Name: FinalText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &509376122
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509376121}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1753136318}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -7}
+  m_SizeDelta: {x: 400, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &509376123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509376121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 309349af05c74f743a40b9dfc18cce15, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Now, look left, right, and left again to check for cars. Be sure to make
+    eye contact and wave to the driver before crossing! '
+--- !u!222 &509376124
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509376121}
+  m_CullTransparentMesh: 1
 --- !u!1001 &511208249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23064,12 +23167,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeMaterial: {fileID: 2100000, guid: 8f9269d6d328e4f44942b7b44ab6f9f7, type: 2}
   hoverMaterial: {fileID: 2100000, guid: 1837e7f8b84912848b5de8c954d86869, type: 2}
+  activated: 1
+  allOppositeTeleporters: {fileID: 400557239}
   feedback_text: {fileID: 1331144537}
+  instructions: {fileID: 1753136317}
   all_texts:
   - {fileID: 1695366433}
   - {fileID: 1331144537}
   - {fileID: 317026941}
   - {fileID: 1842550996}
+  playerTransform: {fileID: 9087440431407959930}
+  myMovementController: {fileID: 125686508}
 --- !u!1001 &667535325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23730,6 +23838,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679025620}
+  m_CullTransparentMesh: 1
+--- !u!1 &680306330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 680306331}
+  - component: {fileID: 680306333}
+  - component: {fileID: 680306332}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &680306331
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680306330}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 19}
+  m_LocalScale: {x: 4.47, y: 0.82, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1753136318}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -3.66}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &680306332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680306330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8627451, g: 0.8627451, b: 0.8627451, a: 0.8352941}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &680306333
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680306330}
   m_CullTransparentMesh: 1
 --- !u!1 &684140932
 GameObject:
@@ -46327,12 +46510,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeMaterial: {fileID: 2100000, guid: 8f9269d6d328e4f44942b7b44ab6f9f7, type: 2}
   hoverMaterial: {fileID: 2100000, guid: 1837e7f8b84912848b5de8c954d86869, type: 2}
+  activated: 1
+  allOppositeTeleporters: {fileID: 400557239}
   feedback_text: {fileID: 1695366433}
+  instructions: {fileID: 1753136317}
   all_texts:
   - {fileID: 1695366433}
   - {fileID: 1331144537}
   - {fileID: 317026941}
   - {fileID: 1842550996}
+  playerTransform: {fileID: 9087440431407959930}
+  myMovementController: {fileID: 125686508}
 --- !u!4 &1330826316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a1f157dce88f90a4b834834877310700, type: 3}
@@ -50617,12 +50805,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeMaterial: {fileID: 2100000, guid: 8f9269d6d328e4f44942b7b44ab6f9f7, type: 2}
   hoverMaterial: {fileID: 2100000, guid: 1837e7f8b84912848b5de8c954d86869, type: 2}
+  activated: 1
+  allOppositeTeleporters: {fileID: 400557239}
   feedback_text: {fileID: 1842550996}
+  instructions: {fileID: 1753136317}
   all_texts:
   - {fileID: 1695366433}
   - {fileID: 1331144537}
   - {fileID: 317026941}
   - {fileID: 1842550996}
+  playerTransform: {fileID: 9087440431407959930}
+  myMovementController: {fileID: 125686508}
 --- !u!1001 &1451457999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51807,6 +52000,7 @@ RectTransform:
   - {fileID: 1331144538}
   - {fileID: 317026942}
   - {fileID: 1842550997}
+  - {fileID: 1753136318}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60338,6 +60532,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 305e6bebba7ddab4fac63a852d3d5e2a, type: 3}
   m_PrefabInstance: {fileID: 1752564180}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1753136317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753136318}
+  m_Layer: 5
+  m_Name: InstructionsCrossRoad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1753136318
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753136317}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 680306331}
+  - {fileID: 509376122}
+  m_Father: {fileID: 1493474667}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -1.1000061, y: 82.2}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1754868889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4710753133989574291, guid: fe4b88bb98bfcb046bc7501ba8df0512, type: 3}
