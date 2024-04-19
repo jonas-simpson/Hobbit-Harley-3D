@@ -18,6 +18,7 @@ public class PlaySound : MonoBehaviour {
         {
             audio.PlayOneShot(SoundToPlay, Volume);
             alreadyPlayed = true;
+            this.gameObject.SetActive(false);
         }
     }
 }

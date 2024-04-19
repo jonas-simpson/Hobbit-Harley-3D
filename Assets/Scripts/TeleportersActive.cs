@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class TeleportersActive : MonoBehaviour
 {
-    [SerializeField] GameObject teleporter1;
-    [SerializeField] GameObject teleporter2;
-    [SerializeField] GameObject teleporter3;
-    [SerializeField] GameObject teleporter4;
-    [SerializeField] GameObject sidewalkTeleporter;
+    [SerializeField] public GameObject teleporter1;
+    [SerializeField] public GameObject teleporter2;
+    [SerializeField] public GameObject teleporter3;
+    [SerializeField] public GameObject teleporter4;
+    [SerializeField] public GameObject sidewalkTeleporter;
 
     private TeleporterController teleporterController1;
     private TeleporterController teleporterController2;
@@ -17,7 +17,7 @@ public class TeleportersActive : MonoBehaviour
     private TeleporterController teleporterController4;
     private TeleporterController teleporterControllerOG;
 
-    [SerializeField] GameObject instructions;
+    [SerializeField] public GameObject instructions;
     [SerializeField] Camera playerCamera;
     [SerializeField] GameObject leftHalo;
     [SerializeField] GameObject rightHalo;
@@ -151,6 +151,7 @@ public class TeleportersActive : MonoBehaviour
             if (!materialChanged)
             {
                 teleporterController3.GetComponent<MeshRenderer>().material = teleporterController3.activeMaterial;
+                teleporterControllerOG.activated = false;
                 teleporterControllerOG.feedback_text.SetActive(true);
                 materialChanged = true;
             }

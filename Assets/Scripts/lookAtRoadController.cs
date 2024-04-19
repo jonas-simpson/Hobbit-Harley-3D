@@ -6,13 +6,13 @@ using UnityEngine.Playables;
 public class lookAtRoadController : MonoBehaviour
 {
 
-    [SerializeField] GameObject leftHalo;
-    [SerializeField] GameObject rightHalo;
+    [SerializeField] public GameObject leftHalo;
+    [SerializeField] public GameObject rightHalo;
     [SerializeField] CameraLookAt cameraLookAt;
     [SerializeField] GameObject cam;
     [SerializeField] GameObject car;
     [SerializeField] Transform carStop;
-    [SerializeField] CarSpeedController myCarSpeedController;
+    [SerializeField] public CarSpeedController myCarSpeedController;
     [SerializeField] MovementControllerScript myMovementController;
     [SerializeField] GameObject wave2;
 
@@ -86,9 +86,11 @@ public class lookAtRoadController : MonoBehaviour
 
     IEnumerator crossRoad()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(4);
         myMovementController.enabled = true;
         myMovementController.startCrossRoad = true;
         cameraLookAt.enabled = false;
+        yield return new WaitForSeconds(4);
+        carStop.position = new Vector3(carStop.position.x, carStop.position.y, -40);
     }
 }

@@ -13,9 +13,12 @@ public class CarMovementController : MonoBehaviour
     [SerializeField] private int carResetDistance;
 
     private GameObject movementController;
+    GameObject speedController;
 
     private const int slowMovementID = 0;
     private const int stopMovementID = 1;
+
+    public bool goingLeft;
 
     private Vector3 initialPos;
 
@@ -25,7 +28,13 @@ public class CarMovementController : MonoBehaviour
         initialPos = carTransform.position;
 
         movementController = GameObject.Find("MovementController");
-        GameObject speedController = GameObject.Find("CarMovementController");
+        if (goingLeft)
+        {
+            speedController = GameObject.Find("CarMovementController (left)");
+        } else
+        {
+            speedController = GameObject.Find("CarMovementController");
+        }
         mySpeedController = speedController.GetComponent<CarSpeedController>();
 
         mySpeedController.resetSpeed(movementController.GetComponent<MovementControllerScript>().hasCrossed);
@@ -34,7 +43,14 @@ public class CarMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        carTransform.position = carTransform.position - new Vector3(0, 0, mySpeedController.currentMovementSpeed * Time.deltaTime/2);
+        if (goingLeft)
+        {
+            carTransform.position = carTransform.position + new Vector3(0, 0, mySpeedController.currentMovementSpeed * Time.deltaTime / 2);
+        }
+        else
+        {
+            carTransform.position = carTransform.position - new Vector3(0, 0, mySpeedController.currentMovementSpeed * Time.deltaTime / 2);
+        }
         resetPosition();
 
         if(mySpeedController.justCrossed)

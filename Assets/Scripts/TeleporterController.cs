@@ -24,7 +24,9 @@ public class TeleporterController : MonoBehaviour
     public bool readyToContinue;
 
     [SerializeField] public GameObject feedback_text;
-    [SerializeField] public UnityEngine.UI.Image blackScreen;    
+    [SerializeField] public UnityEngine.UI.Image blackScreen;
+
+    AudioSource audioData;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,8 @@ public class TeleporterController : MonoBehaviour
 
         incomingCar.SetActive(false);
         hobbit.SetActive(false);
+
+        audioData = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,6 +56,7 @@ public class TeleporterController : MonoBehaviour
     {
         if (activated)
         {
+            audioData.PlayDelayed(0);
             feedback_text.SetActive(false);
             if (this.name != "Teleport4") //don't teleport into the road
             {
