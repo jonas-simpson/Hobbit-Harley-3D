@@ -50,7 +50,12 @@ public class MovementControllerScript : MonoBehaviour
         {
             currentTargetPos = 2;
             playerTransform.position = Vector3.MoveTowards(playerTransform.position, WayPoints[2].position, movementSpeed * Time.deltaTime);
-        } else
+        } else if (fulfilledTest)
+        {
+            currentTargetPos = 3;
+            playerTransform.position = Vector3.MoveTowards(playerTransform.position, WayPoints[3].position, movementSpeed * Time.deltaTime);
+        } 
+        else
         {
             playerTransform.position = Vector3.MoveTowards(playerTransform.position, WayPoints[currentTargetPos].position, movementSpeed * Time.deltaTime);
 
@@ -69,7 +74,7 @@ public class MovementControllerScript : MonoBehaviour
                 currentTargetPos++;
             }
 
-            if (currentTargetPos == 1) //for now stays at this step forever (at sidewalk about to cross)
+            if (currentTargetPos == 1) 
             {
                 teleporterDirections.SetActive(true);
                 StartCoroutine(waitForBall());
@@ -106,6 +111,7 @@ public class MovementControllerScript : MonoBehaviour
 
     public void setStartTestFalse()
     {
+        startCrossRoad = false;
         startTest = false;
         fulfilledTest = true;
         myUIController.ongoingTest = false;

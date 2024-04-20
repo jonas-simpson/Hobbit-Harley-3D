@@ -18,6 +18,7 @@ public class OppositeTeleporterController : MonoBehaviour
 
     [SerializeField] Transform playerTransform;
     [SerializeField] MovementControllerScript myMovementController;
+    [SerializeField] TestControllerManager testControllerManager;
 
     AudioSource audioData;
 
@@ -85,8 +86,7 @@ public class OppositeTeleporterController : MonoBehaviour
             yield return new WaitForSeconds(6); //time to read feedback C
             feedback_text.SetActive(false);
             yield return new WaitForSeconds(1);
-            instructions.SetActive(true);
-            
+            testControllerManager.startTest = true;
         }
     }
 }

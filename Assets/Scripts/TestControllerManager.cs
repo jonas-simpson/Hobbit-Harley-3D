@@ -15,7 +15,7 @@ public class TestControllerManager : MonoBehaviour
     private int outerTestID;
     private int innerTestID;
 
-    private int[] testsOrder = new int[] { 0, 1, 2, 3, 1, 0, 1, 3, 3, 1, 0, 1, 2, 3 }; // 0: right, 1: left, 2: face, 3: forward
+    private int[] testsOrder = new int[] { 1, 0, 1, 2, 3 };//1, 0, 1, 3, 3, 1, 0, 1, 2, 3 }; // 0: right, 1: left, 2: face, 3: forward
     private string[] helpTexts = new string[] { "Before crossing a street, look to your right to make sure cars are not coming!",
                                                 "Before crossing a street, look to your left to make sure cars are not coming!",
                                                 "If a car is coming, make eye contact with the driver to ask for the right-of-way!",
@@ -34,6 +34,8 @@ public class TestControllerManager : MonoBehaviour
     [SerializeField] private Transform anillo3Pos;
     [SerializeField] private Transform anillo4Pos;
 
+    [SerializeField] GameObject speedController;
+
     [SerializeField] private GameObject HelpText;
     private Text helpTextField;
 
@@ -42,17 +44,19 @@ public class TestControllerManager : MonoBehaviour
 
     private TimelineController myTimelineController;
     private bool RollingProcess;
-    private bool firstTest = true;
+    private bool firstTest = false;
 
 
     public bool waving;
     public bool stopRenderBall = false;
 
+    public bool startTest = false;
+
     // Start is called before the first frame update
     void Start()
     {
         loadTests();
-        outerTestID = 0;
+        outerTestID = 1;
         innerTestID = 0;
 
         testOrderCounter = 0;
@@ -64,7 +68,7 @@ public class TestControllerManager : MonoBehaviour
         GameObject MovementController = GameObject.Find("MovementController");
         myMovementController = MovementController.GetComponent<MovementControllerScript>();
 
-        GameObject speedController = GameObject.Find("CarMovementController");
+        //GameObject speedController = GameObject.Find("CarMovementController (left)");
         mySpeedController = speedController.GetComponent<CarSpeedController>();
 
         GameObject UIController = GameObject.Find("UI_Checklist");
@@ -83,7 +87,7 @@ public class TestControllerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (myMovementController.startTest)
+        if (startTest)
         {
             if(firstTest)
             {
@@ -207,6 +211,7 @@ public class TestControllerManager : MonoBehaviour
             }
             else //testsOrder[testOrderCounter] == 3
             {
+                
                 float sentitivity = 3.0f;
                 if (mousePosX < screenPos.x + (offset * sentitivity) && mousePosX > screenPos.x - (offset * sentitivity))
                 {
@@ -221,7 +226,7 @@ public class TestControllerManager : MonoBehaviour
                     timeTaken = 0;
                 }
             }
-
+            
             if (timeTaken >= targetTestTime)
             {
                 if(testsOrder[testOrderCounter] != 3)
@@ -235,13 +240,17 @@ public class TestControllerManager : MonoBehaviour
                 innerTestID++;
                 testOrderCounter++;
                 HelpText.SetActive(false);
+                
 
                 if (innerTestID >= Tests[outerTestID].Count)
                 {
-                    innerTestID = 0;
-                    outerTestID++;
+                    startTest = false;
+                    myMovementController.enabled = true;
+                    //innerTestID = 0;
+                    //outerTestID++;
                     myMovementController.setStartTestFalse();
                     StartCoroutine(resumeCarMovement());
+
                 }
             }
         }
