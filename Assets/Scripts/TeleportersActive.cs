@@ -172,7 +172,9 @@ public class TeleportersActive : MonoBehaviour
         else if (allDone)
         {
             //look left, look right, look left
-            instructions.GetComponentInChildren<Text>().text = "Now, look left, right, and left again to check for cars. \nBe sure to make eye contact and wave to the driver before crossing!";
+            instructions.GetComponentInChildren<Text>().text = "Now, look left, right, and left again to check for cars. \n\nBe sure to make eye contact and wave to the driver before crossing!";
+            instructions.transform.Find("FinalText").GetComponent<RectTransform>().sizeDelta = new Vector2(500, 200);
+            instructions.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(5.0f, 0.9f, 1.0f);
             instructions.SetActive(true);
             leftHalo.SetActive(true);
             rightHalo.SetActive(true);

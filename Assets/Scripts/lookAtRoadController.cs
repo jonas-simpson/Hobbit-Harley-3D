@@ -90,7 +90,7 @@ public class lookAtRoadController : MonoBehaviour
         myMovementController.enabled = true;
         myMovementController.startCrossRoad = true;
         cameraLookAt.enabled = false;
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
         carStop.position = new Vector3(carStop.position.x, carStop.position.y, -40);
     }
 }

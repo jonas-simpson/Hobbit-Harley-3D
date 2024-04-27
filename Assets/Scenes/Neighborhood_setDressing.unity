@@ -1505,7 +1505,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37917884}
   m_LocalRotation: {x: 0.89036363, y: -0, z: 0.4552501, w: 0}
-  m_LocalPosition: {x: 23.27, y: -1.8600606, z: -10.63}
+  m_LocalPosition: {x: 11.81, y: -1.8600606, z: -5.17}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1299330151}
@@ -2817,7 +2817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -7.3}
+  m_AnchoredPosition: {x: 0, y: -6.55}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &78495814
@@ -2983,78 +2983,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a34b8b7ecee00e4f81e84d30c8a8676, type: 3}
   m_PrefabInstance: {fileID: 91645896}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &93075019
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 93075020}
-  - component: {fileID: 93075022}
-  - component: {fileID: 93075021}
-  m_Layer: 5
-  m_Name: RawImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &93075020
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93075019}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25084996, y: 0.25084996, z: 0.25084996}
-  m_Children: []
-  m_Father: {fileID: 1195419935}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 311.1}
-  m_SizeDelta: {x: 936, y: 528}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &93075021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93075019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 091c8223b9322334e8713bb3dd70c9c6, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &93075022
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93075019}
-  m_CullTransparentMesh: 1
 --- !u!1001 &93215825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5524,7 +5452,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -14.98}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 135.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163372832
 MonoBehaviour:
@@ -6468,6 +6396,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f96119b1f438195499b0f7a4e738c1c5, type: 3}
   m_PrefabInstance: {fileID: 1714150844}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &181129400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 181129401}
+  - component: {fileID: 181129403}
+  - component: {fileID: 181129402}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &181129401
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181129400}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.19441053, y: 0.19441053, z: 0.19441053}
+  m_Children: []
+  m_Father: {fileID: 1195419935}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -292.2, y: 299.6}
+  m_SizeDelta: {x: 1226, y: 861}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &181129402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181129400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 85d815811c03a1d45b7166e597895abc, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &181129403
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181129400}
+  m_CullTransparentMesh: 1
 --- !u!1 &182870743
 GameObject:
   m_ObjectHideFlags: 0
@@ -8896,7 +8896,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250166323}
   m_LocalRotation: {x: -0, y: 0.91741985, z: -0, w: 0.39792055}
-  m_LocalPosition: {x: 18.71, y: 1.52, z: -9.35}
+  m_LocalPosition: {x: 12.39, y: 1.52, z: -5.14}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 1366614616}
@@ -9809,78 +9809,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 986fbde2c445b404ea443afb371df64f, type: 3}
   m_PrefabInstance: {fileID: 278921230}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &280517058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 280517059}
-  - component: {fileID: 280517061}
-  - component: {fileID: 280517060}
-  m_Layer: 5
-  m_Name: RawImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &280517059
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280517058}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25084996, y: 0.25084996, z: 0.25084996}
-  m_Children: []
-  m_Father: {fileID: 993533408}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 318.6}
-  m_SizeDelta: {x: 936, y: 528}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &280517060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280517058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: d956c8985f3519342a43eb5893b7285f, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &280517061
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280517058}
-  m_CullTransparentMesh: 1
 --- !u!1001 &280939208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11982,7 +11910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &328823060
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14505,7 +14433,7 @@ RectTransform:
   m_Children:
   - {fileID: 1416593677}
   - {fileID: 2118246408}
-  - {fileID: 617639121}
+  - {fileID: 488811081}
   m_Father: {fileID: 1493474667}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16826,6 +16754,78 @@ Halo:
     serializedVersion: 2
     rgba: 4280008662
   m_Size: 2
+--- !u!1 &488811080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488811081}
+  - component: {fileID: 488811083}
+  - component: {fileID: 488811082}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &488811081
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488811080}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.19441055, y: 0.19441055, z: 0.19441055}
+  m_Children: []
+  m_Father: {fileID: 430517811}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -292.2, y: 303.9}
+  m_SizeDelta: {x: 1226, y: 861}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &488811082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488811080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 2922c0622cf756a4b91ee40dbe568deb, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &488811083
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488811080}
+  m_CullTransparentMesh: 1
 --- !u!1 &489475823
 GameObject:
   m_ObjectHideFlags: 0
@@ -17231,6 +17231,7 @@ MonoBehaviour:
   wave: {fileID: 0}
   wave2: {fileID: 0}
   startRollingProcess: 0
+  doAnimation: 1
 --- !u!65 &504289365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17323,7 +17324,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2.01
   m_Text: 'Now, look left, right, and left again to check for cars. Be sure to make
     eye contact and wave to the driver before crossing! '
 --- !u!222 &509376124
@@ -19732,7 +19733,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.8
   m_Text: "Yikes, you\u2019re too far out in the road and could be hit!\nSelect the
     safest spot.   "
 --- !u!222 &557272199
@@ -20759,7 +20760,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -3}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 129.3, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587638708
 MonoBehaviour:
@@ -21516,78 +21517,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a1f157dce88f90a4b834834877310700, type: 3}
   m_PrefabInstance: {fileID: 1582498959}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &617639120
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 617639121}
-  - component: {fileID: 617639123}
-  - component: {fileID: 617639122}
-  m_Layer: 5
-  m_Name: RawImage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &617639121
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617639120}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25084996, y: 0.25084996, z: 0.25084996}
-  m_Children: []
-  m_Father: {fileID: 430517811}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 315.4}
-  m_SizeDelta: {x: 936, y: 528}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &617639122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617639120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 1723f51e605971c46b488f04bc8ae413, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &617639123
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617639120}
-  m_CullTransparentMesh: 1
 --- !u!1001 &621690447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22457,6 +22386,7 @@ MonoBehaviour:
   wave: {fileID: 952042693}
   wave2: {fileID: 851961496}
   startRollingProcess: 0
+  doAnimation: 1
 --- !u!65 &644475074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25477,15 +25407,15 @@ RectTransform:
   m_GameObject: {fileID: 726216231}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25084996, y: 0.25084996, z: 0.25084996}
+  m_LocalScale: {x: 0.15226342, y: 0.15226342, z: 0.15226342}
   m_Children: []
   m_Father: {fileID: 1331144538}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 318.6}
-  m_SizeDelta: {x: 936, y: 528}
+  m_AnchoredPosition: {x: -275.1, y: 302.09998}
+  m_SizeDelta: {x: 1710, y: 1050}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726216233
 MonoBehaviour:
@@ -27240,7 +27170,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 2.01
   m_Text: "You\u2019re too far out in the road! If you wait until this point to look
     for cars, one could\r hit you. Step back just a little bit so that you are by
     the nearest headlight of the\r parked car."
@@ -30162,15 +30092,15 @@ RectTransform:
   m_GameObject: {fileID: 870691904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25084996, y: 0.25084996, z: 0.25084996}
+  m_LocalScale: {x: 0.15226342, y: 0.15226342, z: 0.15226342}
   m_Children: []
   m_Father: {fileID: 1842550997}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 318.6}
-  m_SizeDelta: {x: 936, y: 528}
+  m_AnchoredPosition: {x: -275.1, y: 302.09998}
+  m_SizeDelta: {x: 1710, y: 1050}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &870691906
 MonoBehaviour:
@@ -33191,7 +33121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &973994125
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34016,7 +33946,7 @@ RectTransform:
   m_Children:
   - {fileID: 1625750634}
   - {fileID: 790619077}
-  - {fileID: 280517059}
+  - {fileID: 1700111367}
   m_Father: {fileID: 1493474667}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34461,15 +34391,15 @@ RectTransform:
   m_GameObject: {fileID: 1007478643}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25084996, y: 0.25084996, z: 0.25084996}
+  m_LocalScale: {x: 0.15226342, y: 0.15226342, z: 0.15226342}
   m_Children: []
   m_Father: {fileID: 317026942}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 318.6}
-  m_SizeDelta: {x: 936, y: 528}
+  m_AnchoredPosition: {x: -275.1, y: 302.09998}
+  m_SizeDelta: {x: 1710, y: 1050}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1007478645
 MonoBehaviour:
@@ -34575,7 +34505,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.8
   m_Text: "You can see a little better but it is still very hard for oncoming cars
     to see you. \nSelect the safest spot. "
 --- !u!222 &1012304239
@@ -35442,10 +35372,10 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.84
   m_Text: "This is the perfect spot! \nYou\u2019re far enough out to see and be seen
-    but are still\r protected by the parked cars.\n\nLet's see the point of view
-    of the incoming car."
+    but are still\r protected by the parked cars.\nLet's see the point of view of
+    the incoming car."
 --- !u!222 &1044737085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41449,7 +41379,7 @@ RectTransform:
   m_Children:
   - {fileID: 78495813}
   - {fileID: 1044737083}
-  - {fileID: 93075020}
+  - {fileID: 181129401}
   m_Father: {fileID: 1493474667}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -43264,14 +43194,14 @@ RectTransform:
   m_GameObject: {fileID: 1235943220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 19}
-  m_LocalScale: {x: 4.4183993, y: 1.1794465, z: 1}
+  m_LocalScale: {x: 4.4183993, y: 1.33, z: 1}
   m_Children: []
   m_Father: {fileID: 983368418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: -5.97}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235943222
@@ -45209,15 +45139,15 @@ RectTransform:
   m_GameObject: {fileID: 1299112757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25085, y: 0.25085, z: 0.25085}
+  m_LocalScale: {x: 0.19441056, y: 0.19441056, z: 0.19441056}
   m_Children: []
   m_Father: {fileID: 312242437}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 315}
-  m_SizeDelta: {x: 936, y: 528}
+  m_AnchoredPosition: {x: -292.2, y: 303.5}
+  m_SizeDelta: {x: 1226, y: 861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299112759
 MonoBehaviour:
@@ -45239,7 +45169,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: a95b61790bf2b1a45b822c2de03a0e62, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8b78c7b8c25c1cb48a2d633697b2ecdf, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -45754,7 +45684,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -7}
-  m_SizeDelta: {x: 400, y: 100}
+  m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314595102
 MonoBehaviour:
@@ -45788,7 +45718,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.4
   m_Text: "Oh no! Hobbit\u2019s basketball has rolled across the street, and you
     must safely cross to retrieve it. \n\nClick on the portals to find the best spots
     to stand where you can see approaching cars and ensure they see you too. "
@@ -46688,11 +46618,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 71760434618019604, guid: 72c197183937abb489f444cad27f6570, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.16
+      value: -15.95
       objectReference: {fileID: 0}
     - target: {fileID: 71760434618019604, guid: 72c197183937abb489f444cad27f6570, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.51
+      value: -24.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 71760434618019604, guid: 72c197183937abb489f444cad27f6570, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 71760434618019604, guid: 72c197183937abb489f444cad27f6570, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71760434618019604, guid: 72c197183937abb489f444cad27f6570, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 71760434618019604, guid: 72c197183937abb489f444cad27f6570, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 71760434618019604, guid: 72c197183937abb489f444cad27f6570, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 71760434830121550, guid: 72c197183937abb489f444cad27f6570, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46739,6 +46689,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1532226333}
     - target: {fileID: 71760435914412352, guid: 72c197183937abb489f444cad27f6570, type: 3}
+      propertyPath: finalText
+      value: 
+      objectReference: {fileID: 328823059}
+    - target: {fileID: 71760435914412352, guid: 72c197183937abb489f444cad27f6570, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -46754,6 +46708,10 @@ PrefabInstance:
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 9087440431407959930}
+    - target: {fileID: 71760435914412352, guid: 72c197183937abb489f444cad27f6570, type: 3}
+      propertyPath: oppositeTeleporters
+      value: 
+      objectReference: {fileID: 1965042321}
     - target: {fileID: 71760435914412352, guid: 72c197183937abb489f444cad27f6570, type: 3}
       propertyPath: teleporterController
       value: 
@@ -47720,6 +47678,7 @@ MonoBehaviour:
   wave: {fileID: 0}
   wave2: {fileID: 0}
   startRollingProcess: 0
+  doAnimation: 1
 --- !u!65 &1367871773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49425,7 +49384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: 2.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416593678
@@ -50155,7 +50114,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -7}
-  m_SizeDelta: {x: 400, y: 100}
+  m_SizeDelta: {x: 545.04, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431500372
 MonoBehaviour:
@@ -50190,7 +50149,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Now try crossing the street safety on your own. \nUse your headset or
+  m_Text: "Now try crossing the street safety on your own. \n\nUse your headset or
     mouse to choose the safest spot to\r look for oncoming traffic."
 --- !u!222 &1431500373
 CanvasRenderer:
@@ -50946,7 +50905,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -14.98}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 135.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458292830
 MonoBehaviour:
@@ -53094,7 +53053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3.8}
+  m_AnchoredPosition: {x: 0, y: -1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525223072
@@ -53356,7 +53315,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.8
   m_Text: "You cannot see oncoming cars and drivers cannot see you. \nSelect the
     safest spot."
 --- !u!222 &1534414599
@@ -54291,7 +54250,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 37}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 115.6, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582174340
 MonoBehaviour:
@@ -55024,9 +54983,9 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: "The parked cars block your view and drivers cannot see you. You need to
-    go out\r further into the road to be able to look for oncoming cars.\n\nTeleport
+    m_LineSpacing: 0.98
+  m_Text: "The parked cars block your view and drivers cannot see you. \n\nYou need
+    to go out\r further into the road to be able to look for oncoming cars.\n\nTeleport
     back to the sidewalk (star teleporter) when you are ready to continue."
 --- !u!222 &1614985692
 CanvasRenderer:
@@ -55405,14 +55364,14 @@ RectTransform:
   m_GameObject: {fileID: 1625750633}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 19}
-  m_LocalScale: {x: 6.224063, y: 0.6838599, z: 1.0025}
+  m_LocalScale: {x: 6.24, y: 0.78, z: 1.0025}
   m_Children: []
   m_Father: {fileID: 993533408}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -17}
+  m_AnchoredPosition: {x: 0, y: -15.97}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625750635
@@ -57167,7 +57126,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -14.98}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 135.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653424208
 MonoBehaviour:
@@ -58878,6 +58837,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad32d748bf059b4697d282b20e2baf7, type: 3}
+--- !u!1 &1700111366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700111367}
+  - component: {fileID: 1700111369}
+  - component: {fileID: 1700111368}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1700111367
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700111366}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.19441053, y: 0.19441053, z: 0.19441053}
+  m_Children: []
+  m_Father: {fileID: 993533408}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -292.2, y: 307.1}
+  m_SizeDelta: {x: 1226, y: 861}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1700111368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700111366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: ca1030d0642d2d543a708f610673d9e1, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1700111369
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700111366}
+  m_CullTransparentMesh: 1
 --- !u!1 &1704476629 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e2ea3ed3aea4816498e345fb2bf96fcd, type: 3}
@@ -59418,7 +59449,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.8
   m_Text: "Perfect! \nYou\u2019re far enough out to see and be seen while still being
     protected by the parked cars."
 --- !u!222 &1721227985
@@ -60311,7 +60342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1746853427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -62708,9 +62739,13 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "You have safely crossed all streets; great job!\n\nAlways remember pedestrian
-    safety!\n\n\n\n\n\n\n\n\n\n\n\n\n\n                                                                         
+    m_LineSpacing: 1.18
+  m_Text: "Great job getting your basketball safely! \n\nYou did a really good job
+    looking left, right, and left again before crossing the street. \n\nIt's also
+    important to make eye contact with drivers before crossing where cars might not
+    see you behind parked cars. \r\n\r\n\u202FJust remember, when you're crossing
+    the street not at a crosswalk or stoplight, cars don't have to stop for you.
+    \n\nSo always be extra careful and make sure it's safe before crossing! \n\n\n                                                                         
     Press the button to exit"
 --- !u!222 &1824724937
 CanvasRenderer:
@@ -63853,7 +63888,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -14.98}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 100, y: 135.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1872808593
 MonoBehaviour:
@@ -66307,6 +66342,7 @@ MonoBehaviour:
   wave: {fileID: 0}
   wave2: {fileID: 0}
   startRollingProcess: 0
+  doAnimation: 1
 --- !u!114 &1965042321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66362,7 +66398,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 22}
-  m_SizeDelta: {x: 350, y: 300}
+  m_SizeDelta: {x: 403, y: 304.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1965306894
 MonoBehaviour:
@@ -66396,7 +66432,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.3
   m_Text: "Help Hobbit get his basketball back safely. \n\nLook out for cars: left,
     right, left again! \n\nMake eye contact with drivers and give a big wave while
     crossing. \n\nFollow the signs and listen for clues. Use the glowing rings to
@@ -67391,7 +67427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995149091}
   m_LocalRotation: {x: -0, y: 0.91741985, z: -0, w: 0.39792055}
-  m_LocalPosition: {x: 18.71, y: 1.52, z: -9.35}
+  m_LocalPosition: {x: 12.39, y: 1.52, z: -5.14}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 33459320}
@@ -70673,15 +70709,15 @@ RectTransform:
   m_GameObject: {fileID: 2091165524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25084996, y: 0.25084996, z: 0.25084996}
+  m_LocalScale: {x: 0.15226342, y: 0.15226342, z: 0.15226342}
   m_Children: []
   m_Father: {fileID: 1695366434}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 318.6}
-  m_SizeDelta: {x: 936, y: 528}
+  m_AnchoredPosition: {x: -275.1, y: 302.1}
+  m_SizeDelta: {x: 1710, y: 1050}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2091165526
 MonoBehaviour:
@@ -71862,9 +71898,9 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 1.84
   m_Text: "This is still a little too close to the curb. \nYou can see a little better,
-    but it is still very\r hard for oncoming cars to see you.\n\nLet's see the point
+    but it is still very\r hard for oncoming cars to see you.\nLet's see the point
     of view of the incoming car."
 --- !u!222 &2118246410
 CanvasRenderer:
@@ -74545,7 +74581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCamera: {fileID: 9087440430139225193}
-  targetTestTime: 100
+  targetTestTime: 300
   watchDrivertargetTestTime: 40
   anillo1Pos: {fileID: 674625666}
   anillo2Pos: {fileID: 1787000404}

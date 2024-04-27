@@ -24,7 +24,7 @@ public class ButtonManager : MonoBehaviour
         finalElements.SetActive(false);
         Time.timeScale = 0f;
 
-        lastWayPoint = GameObject.Find("WayPoint6").transform;
+        lastWayPoint = GameObject.Find("WayPoint4").transform;
 
         GameObject UIController = GameObject.Find("UI_Checklist");
         myUIController = UIController.GetComponent<UITaskController>();

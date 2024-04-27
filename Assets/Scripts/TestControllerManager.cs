@@ -132,14 +132,13 @@ public class TestControllerManager : MonoBehaviour
         
         testTimeTaken++;
 
-        if(testTimeTaken >= targetHelpTime)
+    
+        if(!myMovementController.getExperienceDone())
         {
-            if(!myMovementController.getExperienceDone())
-            {
-                setText();
-                HelpText.SetActive(true);
-            } 
-        }
+            setText();
+            HelpText.SetActive(true);
+        } 
+
 
         /*if(myTimelineController.startRollingProcess)
         {
@@ -158,7 +157,7 @@ public class TestControllerManager : MonoBehaviour
                 Vector3 toTarget = (Tests[outerTestID][innerTestID].transform.position - myCamera.transform.position).normalized;
                 float dotProd = Vector3.Dot(toTarget, myCamera.transform.forward);
 
-                if (screenPos.x + (offset * 10.0f) < mousePosX && dotProd > 0.35f)
+                if (screenPos.x + (offset * 20.0f) < mousePosX && dotProd > 0.15f)
                 {
                     timeTaken++;
                 }
@@ -267,16 +266,10 @@ public class TestControllerManager : MonoBehaviour
 
     IEnumerator resumeCarMovement()
     {
-        if (!myMovementController.hasCrossed)
-        {
-            mySpeedController.justCrossed = true;
-            yield return new WaitForSeconds(4);
-            stopRenderBall = true;
-            yield return new WaitForSeconds(1);
-            mySpeedController.resetSpeed(false);
-            yield return new WaitForSeconds(2);
-            myMovementController.hasCrossed = true;  
-        }
+        yield return new WaitForSeconds(10);
+        stopRenderBall = true;
+        mySpeedController.resetSpeed(true); 
+        
     }
 
     void setText()

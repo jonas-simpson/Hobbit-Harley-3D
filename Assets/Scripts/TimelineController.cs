@@ -24,8 +24,8 @@ public class TimelineController : MonoBehaviour
 
     private List<Vector3> WayPoints;
     private int currentTargetPos;
-    
 
+    public bool doAnimation = true;
     private Animator animator;
 
 
@@ -83,7 +83,11 @@ public class TimelineController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayableDirector pd = Timeline.GetComponent<PlayableDirector>();
-        if(pd != null)
+        if (this.name == "WayPoint4")
+        {
+            doAnimation = false;
+        }
+        else if(pd != null)
         {
             pd.Play();
         }

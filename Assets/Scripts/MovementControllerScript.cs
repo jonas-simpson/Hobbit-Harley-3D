@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class MovementControllerScript : MonoBehaviour
 {
     [SerializeField] Transform playerTransform;
     [SerializeField] GameObject teleporters;
     [SerializeField] GameObject teleporterDirections;
+    [SerializeField] OppositeTeleportersActive oppositeTeleporters;
 
     [SerializeField] float movementSpeed = 1.0f;
 
@@ -48,12 +50,32 @@ public class MovementControllerScript : MonoBehaviour
     {
         if (startCrossRoad)
         {
+            movementSpeed = 1.5f;
             currentTargetPos = 2;
             playerTransform.position = Vector3.MoveTowards(playerTransform.position, WayPoints[2].position, movementSpeed * Time.deltaTime);
-        } else if (fulfilledTest)
+        } else if (experienceDone)
         {
+            //done
+            //final text enabled in ButtonManager
+
+        } 
+        else if (fulfilledTest)
+        {
+            oppositeTeleporters.deactivateTeleporters();
             currentTargetPos = 3;
             playerTransform.position = Vector3.MoveTowards(playerTransform.position, WayPoints[3].position, movementSpeed * Time.deltaTime);
+            if (WayPoints[3].GetComponent<TimelineController>().doAnimation)
+            {
+                WayPoints[3].GetComponent<TimelineController>().Timeline.GetComponent<PlayableDirector>().Play();
+            } else
+            {
+                WayPoints[3].GetComponent<TimelineController>().Timeline.GetComponent<PlayableDirector>().Stop();
+            }
+
+            if (playerTransform.position == WayPoints[3].position)
+            {
+                experienceDone = true;
+            }
         } 
         else
         {
@@ -102,10 +124,7 @@ public class MovementControllerScript : MonoBehaviour
         }
 
 
-        if (playerTransform.position == WayPoints[4].position) 
-        {
-            experienceDone = true;
-        }
+        
     }
 
 

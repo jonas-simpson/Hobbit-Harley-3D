@@ -58,4 +58,12 @@ public class OppositeTeleportersActive : MonoBehaviour
         teleporterD.SetActive(true);
         this.gameObject.SetActive(false);
     }
+
+    public void deactivateTeleporters()
+    {
+        teleporterA.SetActive(false);
+        teleporterB.SetActive(false);
+        teleporterC.SetActive(false);
+        teleporterD.SetActive(false);
+    }
 }

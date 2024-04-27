@@ -102,16 +102,20 @@ public class TeleporterController : MonoBehaviour
             myCarSpeedController.currentMovementSpeed = 0;
             myCarSpeedController.gameObject.SetActive(false);
             incomingCar.SetActive(true);
-            hobbit.GetComponent<Transform>().position = playerTransform.position - new Vector3(-0.3f, 0.4f, -0.3f);
+            hobbit.GetComponent<Transform>().position = playerTransform.position - new Vector3(-0.2f, 0.4f, -0.3f);
             playerTransform.position = incomingCar.GetComponent<Transform>().position + new Vector3(0.3f, 1.15f, -0.55f);
             playerTransform.rotation = new Quaternion(0, 270, 0, 0);
             hobbit.SetActive(true);
             if (this.name == "Teleport2")
             {
                 feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nThe driver cannot see you clearly due to the parked cars. \nYou should stand away from parked cars to make yourself visible.";
-            } else //teleport 3
+                feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(5.01000023f,1.03833818f,1.00250006f);
+
+            }
+            else //teleport 3
             {
                 feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nNow the driver can see you, and you can see the driver.";
+                feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(4.13999987f,0.850000024f,1.00250006f);
             }
             yield return new WaitForSeconds(10);
             StartCoroutine(fadeToBlack());
@@ -120,10 +124,7 @@ public class TeleporterController : MonoBehaviour
             hobbit.SetActive(false);
             playerTransform.position = hobbit.GetComponent<Transform>().position + new Vector3(0f, 0.4f, 0f);
             playerTransform.rotation = hobbit.GetComponent<Transform>().rotation;
-            if (this.name == "Teleport3")
-            {
-                feedback_text.GetComponentInChildren<Text>().text = "This is the correct place to stand to cross the road. \nLook left, right, and left again to prepare to cross.";
-            } else //teleport 2
+            if (this.name == "Teleport2")
             {
                 feedback_text.GetComponentInChildren<Text>().text = "Teleport back to the sidewalk when you are ready to continue.";
                 feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(4.80999994f, 0.560000002f, 1.00250006f);
