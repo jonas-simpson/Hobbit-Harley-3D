@@ -60,7 +60,13 @@ public class TeleporterController : MonoBehaviour
             feedback_text.SetActive(false);
             if (this.name != "Teleport4") //don't teleport into the road
             {
-                playerTransform.position = transform.position + new Vector3(-0.3f, 1.5f, -0.3f);
+                if (this.name == "Teleport3")
+                {
+                    playerTransform.position = transform.position + new Vector3(0.2f, 1.5f, 0.0f);
+                } else
+                {
+                    playerTransform.position = transform.position + new Vector3(-0.3f, 1.5f, -0.3f);
+                }
                 StartCoroutine(doFeedback());
             } else
             {

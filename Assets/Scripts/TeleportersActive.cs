@@ -18,7 +18,7 @@ public class TeleportersActive : MonoBehaviour
     private TeleporterController teleporterControllerOG;
 
     [SerializeField] public GameObject instructions;
-    [SerializeField] Camera playerCamera;
+    //[SerializeField] Camera playerCamera;
     [SerializeField] GameObject leftHalo;
     [SerializeField] GameObject rightHalo;
     [SerializeField] GameObject lookTarget;
