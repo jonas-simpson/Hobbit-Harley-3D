@@ -79,6 +79,34 @@ public class TeleporterController : MonoBehaviour
         
     }
 
+    public void teleporterClicked()
+    {
+        if (activated)
+        {
+            audioData.PlayDelayed(0);
+            feedback_text.SetActive(false);
+            if (this.name != "Teleport4") //don't teleport into the road
+            {
+                if (this.name == "Teleport3")
+                {
+                    playerTransform.position = transform.position + new Vector3(0.2f, 1.5f, 0.0f);
+                }
+                else
+                {
+                    playerTransform.position = transform.position + new Vector3(-0.3f, 1.5f, -0.3f);
+                }
+                StartCoroutine(doFeedback());
+            }
+            else
+            {
+                feedback_text.GetComponentInChildren<Text>().text = "You’re too far out in the road! If you wait until this point to look for cars, one could hit you. Step back just a little bit so that you are by the nearest headlight of the parked car.";
+                feedback_text.SetActive(true);
+                StartCoroutine(waitTeleport4());
+            }
+
+        }
+    }
+
     private void OnMouseEnter()
     {
         if (activated)
@@ -87,7 +115,23 @@ public class TeleporterController : MonoBehaviour
         }
     }
 
+    public void teleporterHoverEnter()
+    {
+        if (activated)
+        {
+            GetComponent<MeshRenderer>().material = hoverMaterial;
+        }
+    }
+
     private void OnMouseExit()
+    {
+        if (activated)
+        {
+            GetComponent<MeshRenderer>().material = activeMaterial;
+        }
+    }
+
+    public void teleporterHoverExit()
     {
         if (activated)
         {
@@ -109,7 +153,7 @@ public class TeleporterController : MonoBehaviour
             myCarSpeedController.gameObject.SetActive(false);
             incomingCar.SetActive(true);
             hobbit.GetComponent<Transform>().position = playerTransform.position - new Vector3(-0.2f, 0.4f, -0.3f);
-            playerTransform.position = incomingCar.GetComponent<Transform>().position + new Vector3(0.3f, 1.15f, -0.55f);
+            playerTransform.position = incomingCar.GetComponent<Transform>().position + new Vector3(0.3f, 1.3f, -0.55f);
             playerTransform.rotation = new Quaternion(0, 270, 0, 0);
             hobbit.SetActive(true);
             if (this.name == "Teleport2")
