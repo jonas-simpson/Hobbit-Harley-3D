@@ -13,9 +13,6 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     Transform playerTransform;
 
-    [SerializeField]
-    GameObject controllerPointer;
-
     private Transform lastWayPoint;
 
     private GameObject UIController;
@@ -41,7 +38,6 @@ public class ButtonManager : MonoBehaviour
         {
             finalElements.SetActive(true);
             myUIController.hideObjectives();
-            controllerPointer.SetActive(true);
             UIController.SetActive(false);
             Time.timeScale = 0f;
         }
