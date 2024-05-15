@@ -153,7 +153,7 @@ public class TeleporterController : MonoBehaviour
             myCarSpeedController.gameObject.SetActive(false);
             incomingCar.SetActive(true);
             hobbit.GetComponent<Transform>().position = playerTransform.position - new Vector3(-0.2f, 0.4f, -0.3f);
-            playerTransform.position = incomingCar.GetComponent<Transform>().position + new Vector3(0.3f, 1.3f, -0.55f);
+            playerTransform.position = incomingCar.GetComponent<Transform>().position + new Vector3(0.2f, 1.3f, -0.55f);
             playerTransform.rotation = new Quaternion(0, 270, 0, 0);
             hobbit.SetActive(true);
             if (this.name == "Teleport2")

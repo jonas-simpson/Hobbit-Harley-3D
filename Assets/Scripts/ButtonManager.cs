@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class ButtonManager : MonoBehaviour
 
     private GameObject UIController;
     private UITaskController myUIController;
+
+    [SerializeField] XRRayInteractor leftController;
+    [SerializeField] XRRayInteractor rightController;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +50,7 @@ public class ButtonManager : MonoBehaviour
     public void startExperience()
     {
         welcomeElements.SetActive(false);
+        
         Time.timeScale = 1f;
     }
 
