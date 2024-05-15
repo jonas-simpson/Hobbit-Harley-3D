@@ -54,6 +54,20 @@ public class OppositeTeleporterController : MonoBehaviour
         
     }
 
+    public void teleporterClicked()
+    {
+        if (activated)
+        {
+            audioData.PlayDelayed(0);
+            all_texts[0].SetActive(false);
+            all_texts[1].SetActive(false);
+            all_texts[2].SetActive(false);
+            all_texts[3].SetActive(false);
+            StartCoroutine(doFeedback());
+        }
+
+    }
+
     private void OnMouseEnter()
     {
         if (activated)
@@ -63,6 +77,15 @@ public class OppositeTeleporterController : MonoBehaviour
         
     }
 
+    public void teleporterHoverEnter()
+    {
+        if (activated)
+        {
+            GetComponent<MeshRenderer>().material = hoverMaterial;
+        }
+
+    }
+
     private void OnMouseExit()
     {
         if (activated)
@@ -70,6 +93,15 @@ public class OppositeTeleporterController : MonoBehaviour
             GetComponent<MeshRenderer>().material = activeMaterial;
         }
         
+    }
+
+    public void teleporterHoverExit()
+    {
+        if (activated)
+        {
+            GetComponent<MeshRenderer>().material = activeMaterial;
+        }
+
     }
 
     IEnumerator doFeedback()
