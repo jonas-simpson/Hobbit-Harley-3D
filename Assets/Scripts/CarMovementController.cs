@@ -12,6 +12,8 @@ public class CarMovementController : MonoBehaviour
 
     [SerializeField] private int carResetDistance;
 
+    [SerializeField] private Camera myCamera;
+
     private GameObject movementController;
     GameObject speedController;
 
@@ -21,6 +23,9 @@ public class CarMovementController : MonoBehaviour
     public bool goingLeft;
 
     private Vector3 initialPos;
+
+    [SerializeField] private MeshCollider m_Collider;
+    [SerializeField] private Transform sphere;
 
     // Start is called before the first frame update
     void Start()
@@ -65,8 +70,31 @@ public class CarMovementController : MonoBehaviour
                 mySpeedController.justCrossed = false;
             }
         }
+
+        isScreenCenterInside();
     }
 
+    void isScreenCenterInside()
+    {
+        Ray ray = new Ray(myCamera.transform.position, sphere.position);
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward, out hit, 30.0f))
+        {
+            GameObject objeto = hit.collider.gameObject;
+            if (objeto.GetComponent<CarMovementController>())
+            {
+                mySpeedController.changeMovementspeed(slowMovementID);
+            }
+            else if (!objeto.GetComponent<SphereCollider>())
+            {
+                mySpeedController.changeMovementspeed(-1);
+            }
+        }
+    }
+
+    /*
     void OnMouseOver()
     {
         //If your mouse hovers over the GameObject with the script attached, output this message
@@ -78,6 +106,7 @@ public class CarMovementController : MonoBehaviour
         //If your mouse hovers over the GameObject with the script attached, output this message
         mySpeedController.changeMovementspeed(-1);
     }
+    */
 
     void checkCarPosition()
     {
