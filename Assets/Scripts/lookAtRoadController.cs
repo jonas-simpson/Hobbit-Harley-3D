@@ -9,7 +9,7 @@ public class lookAtRoadController : MonoBehaviour
     [SerializeField] public GameObject leftHalo;
     [SerializeField] public GameObject rightHalo;
     [SerializeField] CameraLookAt cameraLookAt;
-    [SerializeField] GameObject cam;
+    [SerializeField] GameObject cursor;
     [SerializeField] GameObject car;
     [SerializeField] Transform carStop;
     [SerializeField] public CarSpeedController myCarSpeedController;
@@ -24,7 +24,7 @@ public class lookAtRoadController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.position = cam.transform.position;
+        //this.transform.position = cursor.transform.position;
         cameraLookAt.enabled = true;
         myCarSpeedController.currentMovementSpeed = 0;
         myCarSpeedController.gameObject.SetActive(false);

@@ -113,7 +113,7 @@ public class OppositeTeleporterController : MonoBehaviour
         if (this.name == "TeleportC")
         {
             myMovementController.enabled = false;
-            playerTransform.position = transform.position + new Vector3(0.5f, 1.5f, 0f);
+            playerTransform.position = transform.position + new Vector3(0.5f, 1.5f, 0f); 
             allOppositeTeleporters.choseCorrectly = true;
             yield return new WaitForSeconds(6); //time to read feedback C
             feedback_text.SetActive(false);
