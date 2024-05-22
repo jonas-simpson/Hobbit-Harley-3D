@@ -19,8 +19,8 @@ public class ButtonManager : MonoBehaviour
     private GameObject UIController;
     private UITaskController myUIController;
 
-    [SerializeField] XRRayInteractor leftController;
-    [SerializeField] XRRayInteractor rightController;
+    [SerializeField] XRInteractorLineVisual leftController;
+    [SerializeField] XRInteractorLineVisual rightController;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +41,8 @@ public class ButtonManager : MonoBehaviour
         if (playerTransform.position == lastWayPoint.position)
         {
             finalElements.SetActive(true);
+            leftController.enabled = true;
+            rightController.enabled = true;
             myUIController.hideObjectives();
             UIController.SetActive(false);
             Time.timeScale = 0f;
@@ -50,7 +52,8 @@ public class ButtonManager : MonoBehaviour
     public void startExperience()
     {
         welcomeElements.SetActive(false);
-        
+        leftController.enabled = false;
+        rightController.enabled = false;
         Time.timeScale = 1f;
     }
 

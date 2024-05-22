@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ControlAllOppositeTeleporters : MonoBehaviour
 {
@@ -8,6 +10,9 @@ public class ControlAllOppositeTeleporters : MonoBehaviour
     [SerializeField] OppositeTeleporterController tB;
     [SerializeField] OppositeTeleporterController tC;
     [SerializeField] OppositeTeleporterController tD;
+
+    [SerializeField] XRInteractorLineVisual leftController;
+    [SerializeField] XRInteractorLineVisual rightController;
 
     public bool choseCorrectly = false;
 
@@ -22,6 +27,8 @@ public class ControlAllOppositeTeleporters : MonoBehaviour
     {
         if (choseCorrectly)
         {
+            leftController.enabled = false;
+            rightController.enabled = false;
             tA.activated = false;
             tA.gameObject.SetActive(false);
             tB.activated = false;

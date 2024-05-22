@@ -150,7 +150,6 @@ public class TestControllerManager : MonoBehaviour
         if (outerTestID < myMovementController.getWaypointsLength() - 1) // minus initial waypoint
         {
             Tests[outerTestID][innerTestID].SetActive(true);
-            //float mousePosX = Input.mousePosition.x;
             float mousePosX = XRSettings.eyeTextureWidth / 2;
             Vector3 screenPos = myCamera.WorldToScreenPoint(Tests[outerTestID][innerTestID].transform.position);
 
@@ -184,7 +183,6 @@ public class TestControllerManager : MonoBehaviour
             }
             else if (testsOrder[testOrderCounter] == 2)
             {
-                //float mousePosY = Input.mousePosition.y;
                 float mousePosY = XRSettings.eyeTextureHeight / 2;
                 Vector3 anillo1 = myCamera.WorldToScreenPoint(anillo1Pos.position);
                 Vector3 anillo2 = myCamera.WorldToScreenPoint(anillo2Pos.position);

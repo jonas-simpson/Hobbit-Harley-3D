@@ -115,7 +115,7 @@ public class OppositeTeleporterController : MonoBehaviour
             myMovementController.enabled = false;
             playerTransform.position = transform.position + new Vector3(0.5f, 1.5f, 0f); 
             allOppositeTeleporters.choseCorrectly = true;
-            yield return new WaitForSeconds(6); //time to read feedback C
+            yield return new WaitForSeconds(7); //time to read feedback C
             feedback_text.SetActive(false);
             yield return new WaitForSeconds(1);
             testControllerManager.startTest = true;

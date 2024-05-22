@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class lookAtRoadController : MonoBehaviour
 {
@@ -15,20 +17,28 @@ public class lookAtRoadController : MonoBehaviour
     [SerializeField] public CarSpeedController myCarSpeedController;
     [SerializeField] MovementControllerScript myMovementController;
     [SerializeField] GameObject wave2;
+    [SerializeField] AudioSource sound;
 
     private bool leftDone1 = false;
     private bool leftDone2 = false;
     private bool rightDone = false;
     private bool waving = true;
 
+    [SerializeField] XRInteractorLineVisual leftController;
+    [SerializeField] XRInteractorLineVisual rightController;
+
     // Start is called before the first frame update
     void Start()
     {
         //this.transform.position = cursor.transform.position;
+        leftHalo.SetActive(true); 
+        rightHalo.SetActive(true);
         cameraLookAt.enabled = true;
         myCarSpeedController.currentMovementSpeed = 0;
         myCarSpeedController.gameObject.SetActive(false);
         car.SetActive(true);
+        leftController.enabled = false;
+        rightController.enabled = false;
     }
 
     // Update is called once per frame
@@ -71,6 +81,8 @@ public class lookAtRoadController : MonoBehaviour
         if (this.transform.position == leftHalo.transform.position)
         {
             leftDone1 = true;
+            sound.Play();
+            leftHalo.SetActive(false);
             if (rightDone)
             {
                 leftDone2 = true;
@@ -78,7 +90,10 @@ public class lookAtRoadController : MonoBehaviour
         }
         else if (this.transform.position == rightHalo.transform.position)
         {
+            leftHalo.SetActive(true);
+            rightHalo.SetActive(false);
             rightDone = true;
+            sound.Play();
         }
 
         
@@ -92,6 +107,6 @@ public class lookAtRoadController : MonoBehaviour
         cameraLookAt.enabled = false;
         cameraLookAt.gameObject.transform.localEulerAngles = Vector3.zero;
         yield return new WaitForSeconds(5);
-        carStop.position = new Vector3(carStop.position.x, carStop.position.y, -40);
+        carStop.position = new Vector3(carStop.position.x, carStop.position.y, -100);
     }
 }

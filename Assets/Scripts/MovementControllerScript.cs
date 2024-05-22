@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class MovementControllerScript : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class MovementControllerScript : MonoBehaviour
     private UITaskController myUIController;
 
     private bool experienceDone = false;
+
+    [SerializeField] XRInteractorLineVisual leftController;
+    [SerializeField] XRInteractorLineVisual rightController;
 
 
     // Start is called before the first frame update
@@ -148,9 +152,11 @@ public class MovementControllerScript : MonoBehaviour
 
     IEnumerator waitForBall()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(14);
         teleporterDirections.SetActive(false);
         this.enabled = false;
         teleporters.gameObject.SetActive(true);
+        leftController.enabled = true;
+        rightController.enabled = true;
     }
 }

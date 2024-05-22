@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class OppositeTeleportersActive : MonoBehaviour
 {
@@ -17,7 +19,8 @@ public class OppositeTeleportersActive : MonoBehaviour
     [SerializeField] GameObject teleporterC;
     [SerializeField] GameObject teleporterD;
 
-    
+    [SerializeField] XRInteractorLineVisual leftController;
+    [SerializeField] XRInteractorLineVisual rightController;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +53,9 @@ public class OppositeTeleportersActive : MonoBehaviour
 
     IEnumerator activateTeleporters()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(8);
+        leftController.enabled = true;
+        rightController.enabled = true;
         instructions.SetActive(false);
         teleporterA.SetActive(true);
         teleporterB.SetActive(true);

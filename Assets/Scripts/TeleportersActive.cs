@@ -18,9 +18,6 @@ public class TeleportersActive : MonoBehaviour
     private TeleporterController teleporterControllerOG;
 
     [SerializeField] public GameObject instructions;
-    //[SerializeField] Camera playerCamera;
-    [SerializeField] GameObject leftHalo;
-    [SerializeField] GameObject rightHalo;
     [SerializeField] GameObject lookTarget;
 
     public bool atSidewalk;
@@ -119,9 +116,10 @@ public class TeleportersActive : MonoBehaviour
      
             } 
         }
-
-        else if (teleporterController2.activated && teleporterController2.readyToContinue)
+        
+        else if (teleporterController2.readyToContinue)
         {
+            teleporterController2.activated = false;
             teleporterControllerOG.activated = true;
             materialChanged = false;
             if (atSidewalk)
@@ -136,12 +134,12 @@ public class TeleportersActive : MonoBehaviour
                     materialChanged = true;
                 }
                 teleporterController2.readyToContinue = false;
-                teleporterController2.activated = false;
+                
 
             }
         }
 
-        else if (teleporterController4.activated && teleporterController4.readyToContinue)
+        else if (teleporterController4.readyToContinue)
         {
             materialChanged = false;
             teleporterController4.done = true;
@@ -159,7 +157,7 @@ public class TeleportersActive : MonoBehaviour
             teleporterController4.activated = false;
         }
 
-        else if (teleporterController3.activated && teleporterController3.readyToContinue)
+        else if (teleporterController3.readyToContinue)
         {
             teleporterController3.GetComponent<MeshRenderer>().material = teleporterController3.inactiveMaterial;
             teleporterController3.activated = false;
@@ -169,15 +167,15 @@ public class TeleportersActive : MonoBehaviour
             teleporterController3.done = true;
         }
 
+        else if (teleporterController2.activated || teleporterController3.activated)
+        {
+            teleporterControllerOG.activated = false;
+        }
+
         else if (allDone)
         {
             //look left, look right, look left
-            instructions.GetComponentInChildren<Text>().text = "Now, look left, right, and left again to check for cars. \n\nBe sure to make eye contact and wave to the driver before crossing!";
-            instructions.transform.Find("FinalText").GetComponent<RectTransform>().sizeDelta = new Vector2(500, 200);
-            instructions.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(5.0f, 0.9f, 1.0f);
             instructions.SetActive(true);
-            leftHalo.SetActive(true);
-            rightHalo.SetActive(true);
             lookTarget.SetActive(true);
         }
        
