@@ -50,7 +50,7 @@ public class OppositeTeleportersActive : MonoBehaviour
 
     IEnumerator activateTeleporters()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(8);
         instructions.SetActive(false);
         teleporterA.SetActive(true);
         teleporterB.SetActive(true);

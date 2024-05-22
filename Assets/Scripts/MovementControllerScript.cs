@@ -148,7 +148,7 @@ public class MovementControllerScript : MonoBehaviour
 
     IEnumerator waitForBall()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(14);
         teleporterDirections.SetActive(false);
         this.enabled = false;
         teleporters.gameObject.SetActive(true);

@@ -15,6 +15,7 @@ public class lookAtRoadController : MonoBehaviour
     [SerializeField] public CarSpeedController myCarSpeedController;
     [SerializeField] MovementControllerScript myMovementController;
     [SerializeField] GameObject wave2;
+    [SerializeField] AudioSource sound;
 
     private bool leftDone1 = false;
     private bool leftDone2 = false;
@@ -24,6 +25,8 @@ public class lookAtRoadController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        leftHalo.SetActive(true);
+        rightHalo.SetActive(true);
         this.transform.position = cam.transform.position;
         cameraLookAt.enabled = true;
         myCarSpeedController.currentMovementSpeed = 0;
@@ -71,6 +74,8 @@ public class lookAtRoadController : MonoBehaviour
         if (this.transform.position == leftHalo.transform.position)
         {
             leftDone1 = true;
+            sound.Play();
+            leftHalo.SetActive(false);
             if (rightDone)
             {
                 leftDone2 = true;
@@ -78,7 +83,10 @@ public class lookAtRoadController : MonoBehaviour
         }
         else if (this.transform.position == rightHalo.transform.position)
         {
+            leftHalo.SetActive(true);
+            rightHalo.SetActive(false);
             rightDone = true;
+            sound.Play();
         }
 
         
@@ -91,6 +99,6 @@ public class lookAtRoadController : MonoBehaviour
         myMovementController.startCrossRoad = true;
         cameraLookAt.enabled = false;
         yield return new WaitForSeconds(5);
-        carStop.position = new Vector3(carStop.position.x, carStop.position.y, -40);
+        carStop.position = new Vector3(carStop.position.x, carStop.position.y, -100);
     }
 }

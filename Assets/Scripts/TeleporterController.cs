@@ -60,7 +60,13 @@ public class TeleporterController : MonoBehaviour
             feedback_text.SetActive(false);
             if (this.name != "Teleport4") //don't teleport into the road
             {
-                playerTransform.position = transform.position + new Vector3(-0.3f, 1.5f, -0.3f);
+                if (this.name == "Teleport3")
+                {
+                    playerTransform.position = transform.position + new Vector3(0.2f, 1.5f, 0.0f);
+                } else
+                {
+                    playerTransform.position = transform.position + new Vector3(-0.3f, 1.5f, -0.3f);
+                }
                 StartCoroutine(doFeedback());
             } else
             {
@@ -95,7 +101,15 @@ public class TeleporterController : MonoBehaviour
         if (doesChangeViewpoint) //change to car 
         {
             feedback_text.SetActive(true);
-            yield return new WaitForSeconds(5);
+            //time for voiceovers:
+            if (this.name == "Teleport2")
+            {
+                yield return new WaitForSeconds(12);
+            } else //teleport 3
+            {
+                yield return new WaitForSeconds(9);
+            }
+
             StartCoroutine(fadeToBlack());
             yield return new WaitForSeconds(1);
             //change viewport: "stop time and change camera to driver's perspective"
@@ -110,14 +124,16 @@ public class TeleporterController : MonoBehaviour
             {
                 feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nThe driver cannot see you clearly due to the parked cars. \nYou should stand away from parked cars to make yourself visible.";
                 feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(5.01000023f,1.03833818f,1.00250006f);
+                yield return new WaitForSeconds(14);
 
             }
             else //teleport 3
             {
                 feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nNow the driver can see you, and you can see the driver.";
                 feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(4.13999987f,0.850000024f,1.00250006f);
+                yield return new WaitForSeconds(8);
             }
-            yield return new WaitForSeconds(10);
+            
             StartCoroutine(fadeToBlack());
             yield return new WaitForSeconds(1);
             feedback_text.SetActive(false);
@@ -126,6 +142,7 @@ public class TeleporterController : MonoBehaviour
             playerTransform.rotation = hobbit.GetComponent<Transform>().rotation;
             if (this.name == "Teleport2")
             {
+                feedback_text.GetComponent<PlayDingDong>().enabled = false;
                 feedback_text.GetComponentInChildren<Text>().text = "Teleport back to the sidewalk when you are ready to continue.";
                 feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(4.80999994f, 0.560000002f, 1.00250006f);
             }
@@ -144,7 +161,7 @@ public class TeleporterController : MonoBehaviour
 
     IEnumerator waitTeleport4()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(13);
         feedback_text.SetActive(false);
         readyToContinue = true;
     }
