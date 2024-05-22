@@ -56,6 +56,7 @@ public class TeleporterController : MonoBehaviour
     {
         if (activated)
         {
+            activated = false;
             audioData.PlayDelayed(0);
             feedback_text.SetActive(false);
             if (this.name != "Teleport4") //don't teleport into the road
@@ -157,6 +158,7 @@ public class TeleporterController : MonoBehaviour
             feedback_text.SetActive(true);
             readyToContinue = true;
         }
+        activated = true;
     }
 
     IEnumerator waitTeleport4()

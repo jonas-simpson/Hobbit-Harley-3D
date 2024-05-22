@@ -117,8 +117,9 @@ public class TeleportersActive : MonoBehaviour
             } 
         }
 
-        else if (teleporterController2.activated && teleporterController2.readyToContinue)
+        else if (teleporterController2.readyToContinue)
         {
+            teleporterController2.activated = false;
             teleporterControllerOG.activated = true;
             materialChanged = false;
             if (atSidewalk)
@@ -133,12 +134,12 @@ public class TeleportersActive : MonoBehaviour
                     materialChanged = true;
                 }
                 teleporterController2.readyToContinue = false;
-                teleporterController2.activated = false;
+                
 
             }
         }
 
-        else if (teleporterController4.activated && teleporterController4.readyToContinue)
+        else if (teleporterController4.readyToContinue)
         {
             materialChanged = false;
             teleporterController4.done = true;
@@ -156,7 +157,7 @@ public class TeleportersActive : MonoBehaviour
             teleporterController4.activated = false;
         }
 
-        else if (teleporterController3.activated && teleporterController3.readyToContinue)
+        else if (teleporterController3.readyToContinue)
         {
             teleporterController3.GetComponent<MeshRenderer>().material = teleporterController3.inactiveMaterial;
             teleporterController3.activated = false;
@@ -164,6 +165,11 @@ public class TeleportersActive : MonoBehaviour
             teleporterControllerOG.activated = false;
             teleporterController3.readyToContinue = false;
             teleporterController3.done = true;
+        }
+
+        else if (teleporterController2.activated || teleporterController3.activated)
+        {
+            teleporterControllerOG.activated = false;
         }
 
         else if (allDone)
