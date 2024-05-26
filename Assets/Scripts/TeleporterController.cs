@@ -14,6 +14,8 @@ public class TeleporterController : MonoBehaviour
     [SerializeField] private GameObject incomingCar;
     [SerializeField] public GameObject hobbit;
 
+    [SerializeField] private GameObject d_car;
+
     [SerializeField] public Material inactiveMaterial;
     [SerializeField] public Material activeMaterial;
     [SerializeField] private Material hoverMaterial;
@@ -39,6 +41,7 @@ public class TeleporterController : MonoBehaviour
 
         incomingCar.SetActive(false);
         hobbit.SetActive(false);
+        d_car.SetActive(false);
 
         audioData = GetComponent<AudioSource>();
     }
@@ -125,7 +128,7 @@ public class TeleporterController : MonoBehaviour
             {
                 feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nThe driver cannot see you clearly due to the parked cars. \nYou should stand away from parked cars to make yourself visible.";
                 feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(5.01000023f,1.03833818f,1.00250006f);
-                yield return new WaitForSeconds(14);
+                yield return new WaitForSeconds(13);
 
             }
             else //teleport 3
@@ -137,7 +140,6 @@ public class TeleporterController : MonoBehaviour
             
             StartCoroutine(fadeToBlack());
             yield return new WaitForSeconds(1);
-            feedback_text.SetActive(false);
             hobbit.SetActive(false);
             playerTransform.position = hobbit.GetComponent<Transform>().position + new Vector3(0f, 0.4f, 0f);
             playerTransform.rotation = hobbit.GetComponent<Transform>().rotation;
@@ -147,7 +149,6 @@ public class TeleporterController : MonoBehaviour
                 feedback_text.GetComponentInChildren<Text>().text = "Teleport back to the sidewalk when you are ready to continue.";
                 feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(4.80999994f, 0.560000002f, 1.00250006f);
             }
-            feedback_text.SetActive(true);
             myCarSpeedController.gameObject.SetActive(true);
             myCarSpeedController.resetSpeed(true);
             incomingCar.SetActive(false);
@@ -163,8 +164,16 @@ public class TeleporterController : MonoBehaviour
 
     IEnumerator waitTeleport4()
     {
-        yield return new WaitForSeconds(13);
+        //show car going over teleport
+        myCarSpeedController.currentMovementSpeed = 0;
+        myCarSpeedController.gameObject.SetActive(false);
+        d_car.SetActive(true);
+
+        yield return new WaitForSeconds(13); //time to read feedback
         feedback_text.SetActive(false);
+        myCarSpeedController.gameObject.SetActive(true);
+        myCarSpeedController.resetSpeed(true);
+        d_car.SetActive(false);
         readyToContinue = true;
     }
 
