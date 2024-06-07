@@ -196,6 +196,36 @@ public class TestControllerManager : MonoBehaviour
                 {
                     timeTaken++;
 
+                    //proximity restriction
+                    if (mousePosX < anillo1.x + offset * 2 && mousePosX > anillo1.x - offset * 2 && mousePosY < anillo1.y + offset * 2 && mousePosY > anillo1.y - offset * 2)
+                    {
+                        
+                        if (anillo1Pos.position.z >= 51.0f)
+                        {
+                            //Debug.Log("1: " + anillo1Pos.position.z);
+                            //Debug.Log("ring1 proximity restriction");
+                            timeTaken = 0;
+                        }
+                    } else if (mousePosX < anillo2.x + offset * 2 && mousePosX > anillo2.x - offset * 2 && mousePosY < anillo2.y + offset * 2 && mousePosY > anillo2.y - offset * 2)
+                    {
+                        
+                        if (anillo2Pos.position.z >= 51.0f)
+                        {
+                            //Debug.Log("2: " + anillo2Pos.position.z);
+                            //Debug.Log("ring2 proximity restriction");
+                            timeTaken = 0;
+                        }
+                    } else if (mousePosX < anillo3.x + offset * 2 && mousePosX > anillo3.x - offset * 2 && mousePosY < anillo3.y + offset * 2 && mousePosY > anillo3.y - offset * 2)
+                    {
+                        
+                        if (anillo3Pos.position.z >= 51.0f)
+                        {
+                            //Debug.Log("3: " + anillo3Pos.position.z);
+                            //Debug.Log("ring3 proximity restriction");
+                            timeTaken = 0;
+                        }
+                    }
+
                     if (timeTaken >= watchDrivertargetTestTime)
                     {
                         mySpeedController.changeMovementspeed(stopMovementID);
