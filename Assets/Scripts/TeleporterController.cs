@@ -10,6 +10,7 @@ public class TeleporterController : MonoBehaviour
     [SerializeField] CarSpeedController myCarSpeedController;
 
     [SerializeField] public Transform playerTransform;
+    [SerializeField] private Camera myCamera;
 
     [SerializeField] private GameObject incomingCar;
     [SerializeField] public GameObject hobbit;
@@ -123,6 +124,7 @@ public class TeleporterController : MonoBehaviour
             hobbit.GetComponent<Transform>().position = playerTransform.position - new Vector3(-0.2f, 0.4f, -0.3f);
             playerTransform.position = incomingCar.GetComponent<Transform>().position + new Vector3(0.3f, 1.15f, -0.55f);
             playerTransform.rotation = new Quaternion(0, 270, 0, 0);
+            myCamera.transform.LookAt(hobbit.transform);
             hobbit.SetActive(true);
             if (this.name == "Teleport2")
             {

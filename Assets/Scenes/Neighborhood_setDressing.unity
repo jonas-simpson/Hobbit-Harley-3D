@@ -4122,6 +4122,7 @@ MonoBehaviour:
   myMovementController: {fileID: 125686508}
   myCarSpeedController: {fileID: 1268230463}
   playerTransform: {fileID: 9087440431407959930}
+  myCamera: {fileID: 9087440430139225193}
   incomingCar: {fileID: 1023332164}
   hobbit: {fileID: 761369436}
   d_car: {fileID: 1254079543}
@@ -11942,6 +11943,7 @@ MonoBehaviour:
   myMovementController: {fileID: 125686508}
   myCarSpeedController: {fileID: 1268230463}
   playerTransform: {fileID: 9087440431407959930}
+  myCamera: {fileID: 9087440430139225193}
   incomingCar: {fileID: 1023332164}
   hobbit: {fileID: 761369436}
   d_car: {fileID: 1254079543}
@@ -20809,6 +20811,7 @@ MonoBehaviour:
   myMovementController: {fileID: 125686508}
   myCarSpeedController: {fileID: 1268230463}
   playerTransform: {fileID: 9087440431407959930}
+  myCamera: {fileID: 9087440430139225193}
   incomingCar: {fileID: 1023332164}
   hobbit: {fileID: 761369436}
   d_car: {fileID: 1254079543}
@@ -23291,6 +23294,7 @@ MonoBehaviour:
   myMovementController: {fileID: 125686508}
   myCarSpeedController: {fileID: 1268230463}
   playerTransform: {fileID: 9087440431407959930}
+  myCamera: {fileID: 9087440430139225193}
   incomingCar: {fileID: 1023332164}
   hobbit: {fileID: 761369436}
   d_car: {fileID: 1254079543}
@@ -29217,7 +29221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &815882612
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51551,6 +51555,7 @@ MonoBehaviour:
   myMovementController: {fileID: 125686508}
   myCarSpeedController: {fileID: 1268230463}
   playerTransform: {fileID: 9087440431407959930}
+  myCamera: {fileID: 9087440430139225193}
   incomingCar: {fileID: 1023332164}
   hobbit: {fileID: 761369436}
   d_car: {fileID: 1254079543}
@@ -65189,8 +65194,8 @@ MonoBehaviour:
     important to make eye contact with drivers before crossing where cars might not
     see you behind parked cars. \r\n\r\n\u202FJust remember, when you're crossing
     the street not at a crosswalk or stoplight, cars don't have to stop for you.
-    \n\nSo always be extra careful and make sure it's safe before crossing! \n\n\n                                                                         
-    Press the button to exit"
+    \n\nSo always be extra careful and make sure it's safe before crossing! \n\n\nFeel
+    free to close the application."
 --- !u!222 &1824724937
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -79849,7 +79854,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCamera: {fileID: 9087440430139225193}
   sensitivity: 0.05
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 9087440431407959930}
+  maxVerticalAngle: 60
+  minVerticalAngle: -60
 --- !u!23 &9087440431407959924
 MeshRenderer:
   m_ObjectHideFlags: 0

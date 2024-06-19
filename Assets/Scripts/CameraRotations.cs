@@ -10,6 +10,11 @@ public class CameraRotations : MonoBehaviour
 
     [SerializeField] private Transform playerTransform;
 
+    [SerializeField] private float maxVerticalAngle = 60f;  // Maximum look up angle
+    [SerializeField] private float minVerticalAngle = -60f; // Maximum look down angle
+
+    private float verticalRotation = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +31,28 @@ public class CameraRotations : MonoBehaviour
         vp.y *= sensitivity * Time.deltaTime * 10;
         vp.x += 0.5f;
         vp.y += 0.5f;
-        Vector3 sp = myCamera.ViewportToScreenPoint(vp);
 
+        Vector3 sp = myCamera.ViewportToScreenPoint(vp);
         Vector3 v = myCamera.ScreenToWorldPoint(sp);
 
-        transform.LookAt(v, Vector3.up);
+        // Calculate the vertical angle using the dot product
+        Vector3 forward = myCamera.transform.forward;
+        float currentVerticalAngle = Vector3.Dot(forward, Vector3.up);
 
-        //transform.LookAt(myCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, myCamera.nearClipPlane)), Vector3.up);
+        //Camera angle restriction to prevent spinning when looking directly up/down
+        if (currentVerticalAngle < 0.9f && currentVerticalAngle > -0.9f)
+        {
+            transform.LookAt(v, Vector3.up);
+        } else
+        {
+            if (currentVerticalAngle >= 0.9f)
+            {
+                transform.Rotate(0.1f, 0.0f, 0.0f);
+            } else
+            {
+                transform.Rotate(-0.1f, 0.0f, 0.0f);
+            }
+        }
+
     }
 }
