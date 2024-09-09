@@ -75,7 +75,7 @@ public class TeleporterController : MonoBehaviour
                 StartCoroutine(doFeedback());
             } else
             {
-                feedback_text.GetComponentInChildren<Text>().text = "You’re too far out in the road! If you wait until this point to look for cars, one could hit you. Step back just a little bit so that you are by the nearest headlight of the parked car.";
+                feedback_text.GetComponentInChildren<Text>().text = "You’re <color=red>too far out in the road</color>! If you wait until this point to look for cars, one could hit you. <color=red>Step back just a little bit</color> so that you are by the nearest headlight of the parked car.";
                 feedback_text.SetActive(true);
                 StartCoroutine(waitTeleport4());
             }
@@ -128,14 +128,14 @@ public class TeleporterController : MonoBehaviour
             hobbit.SetActive(true);
             if (this.name == "Teleport2")
             {
-                feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nThe driver cannot see you clearly due to the parked cars. \nYou should stand away from parked cars to make yourself visible.";
+                feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nThe driver <color=red>cannot see you clearly</color> due to the parked cars. \nYou should stand away from parked cars to make yourself visible.";
                 feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(5.01000023f,1.03833818f,1.00250006f);
                 yield return new WaitForSeconds(13);
 
             }
             else //teleport 3
             {
-                feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nNow the driver can see you, and you can see the driver.";
+                feedback_text.GetComponentInChildren<Text>().text = "Here is the driver’s view. \nNow the driver can <color=red>see you</color>, and you can <color=red>see the driver</color>.";
                 feedback_text.transform.Find("Background").GetComponent<RectTransform>().localScale = new Vector3(4.13999987f,0.850000024f,1.00250006f);
                 yield return new WaitForSeconds(8);
             }

@@ -7680,7 +7680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -160.68}
+  m_AnchoredPosition: {x: 0, y: -162.3}
   m_SizeDelta: {x: 403, y: 304.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &209030668
@@ -7696,7 +7696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5568628, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.764151, g: 0.09852256, b: 0.09852256, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7705,10 +7705,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 309349af05c74f743a40b9dfc18cce15, type: 3}
-    m_FontSize: 8
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -7855,7 +7855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15862,11 +15862,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1746853427}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.36, y: 150.1}
+  m_AnchoredPosition: {x: 2.36, y: -44.6}
   m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &449404968
@@ -15882,7 +15882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.38823533, b: 0.32941177, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15891,7 +15891,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 309349af05c74f743a40b9dfc18cce15, type: 3}
-    m_FontSize: 17
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -15901,8 +15901,11 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: Welcome to hobbit's playground!
+    m_LineSpacing: 1.04
+  m_Text: "<b>Welcome to hobbit's playground !</b>\n\n\nHelp Hobbit get his basketball
+    back safely. \n\nFollow the signs and listen for clues. Use the glowing rings
+    to guide you.\n\nRemember, cars rule outside marked areas.  \r\n\nHave a blast
+    and stay safe in Hobbit's world!  \r\n\n\nPress the button to start playing. "
 --- !u!222 &449404969
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17991,7 +17994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18011,8 +18014,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2.01
-  m_Text: "Now, look left, right, and left again to check for cars. \nBe sure to
-    make eye contact and wave to the driver before crossing! "
+  m_Text: "Now, <color=red>look left, right, and left </color>again to check for
+    cars. \nBe sure to make <color=red>eye contact</color> and wave to the driver
+    before crossing! "
 --- !u!222 &509376124
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18740,7 +18744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20466,7 +20470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20486,8 +20490,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.8
-  m_Text: "Yikes, you\u2019re too far out in the road and could be hit!\nSelect the
-    safest spot.   "
+  m_Text: "Yikes, you\u2019re <color=red>too far out in the road</color> and could
+    be hit!\nSelect the safest spot.   "
 --- !u!222 &557272199
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28256,7 +28260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -28276,9 +28280,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 2.01
-  m_Text: "You\u2019re too far out in the road! If you wait until this point to look
-    for cars, one could\r hit you. Step back just a little bit so that you are by
-    the nearest headlight of the\r parked car."
+  m_Text: "You\u2019re <color=red>too far out in the road</color>! If you wait until
+    this point to look for cars, one could\r hit you. <color=red>Step back just a
+    little bit</color> so that you are by the nearest headlight of the\r parked car."
 --- !u!222 &790619079
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31714,7 +31718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.39607847, b: 0.32941177, a: 1}
+  m_Color: {r: 1, g: 0.041420113, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -35659,7 +35663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -35679,8 +35683,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.8
-  m_Text: "You can see a little better but it is still very hard for oncoming cars
-    to see you. \nSelect the safest spot. "
+  m_Text: "You can <color=red>see a little better</color> but it is still <color=red>very
+    hard for oncoming cars to see you</color>. \nSelect the safest spot. "
 --- !u!222 &1012304239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36587,7 +36591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -36607,9 +36611,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.84
-  m_Text: "This is the perfect spot! \nYou\u2019re far enough out to see and be seen
-    but are still\r protected by the parked cars.\nLet's see the point of view of
-    the incoming car."
+  m_Text: "This is the perfect spot! \nYou\u2019re far <color=red>enough out to see
+    and be seen</color> but are still\r protected by the parked cars.\nLet's see
+    the point of view of the incoming car."
 --- !u!222 &1044737085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47230,7 +47234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -47251,8 +47255,9 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.4
   m_Text: "Oh no! Hobbit\u2019s basketball has rolled across the street, and you
-    must safely cross to retrieve it. \n\nClick on the portals to find the best spots
-    to stand where you can see approaching cars and ensure they see you too. "
+    must safely cross to retrieve it. \n\nClick on the portals to <color=red>find
+    the best spots</color> to stand <color=red>where you can see approaching cars
+    and ensure they see you too. </color>"
 --- !u!222 &1314595103
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50592,7 +50597,7 @@ RectTransform:
   m_Children:
   - {fileID: 1585168904}
   m_Father: {fileID: 1746853427}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -51982,7 +51987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -52002,7 +52007,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Now try crossing the street safety on your own. \n\nUse your headset or
+  m_Text: "Now try crossing the street safely on your own. \n\nUse your headset or
     mouse to choose the safest spot to\r look for oncoming traffic."
 --- !u!222 &1431500373
 CanvasRenderer:
@@ -55262,7 +55267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -55282,8 +55287,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.8
-  m_Text: "You cannot see oncoming cars and drivers cannot see you. \nSelect the
-    safest spot."
+  m_Text: "You <color=red>cannot see</color> oncoming cars and <color=red>drivers
+    cannot see you</color>. \nSelect the safest spot."
 --- !u!222 &1534414599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56325,8 +56330,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.2}
-  m_SizeDelta: {x: 115.6, y: 123.55}
+  m_AnchoredPosition: {x: 0, y: -71.8}
+  m_SizeDelta: {x: 115.6, y: 82.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582174340
 MonoBehaviour:
@@ -57040,7 +57045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -57060,9 +57065,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 0.98
-  m_Text: "The parked cars block your view and drivers cannot see you. \n\nYou need
-    to go out\r further into the road to be able to look for oncoming cars.\n\nTeleport
-    back to the sidewalk (star teleporter) when you are ready to continue."
+  m_Text: "The parked cars <color=red>block your view</color> and <color=red>drivers
+    cannot see you</color>.\n\nYou need to go out\r further into the road to be <color=red>able
+    to look for oncoming cars</color>.\n\nTeleport back to the sidewalk (<color=red>star
+    teleporter</color>) when you are ready to continue."
 --- !u!222 &1614985692
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61678,7 +61684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -61698,8 +61704,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.8
-  m_Text: "Perfect! \nYou\u2019re far enough out to see and be seen while still being
-    protected by the parked cars."
+  m_Text: "Perfect! \nYou\u2019re far enough out to <color=red>see and be seen</color>
+    while still being <color=red>protected</color> by the parked cars."
 --- !u!222 &1721227985
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62605,10 +62611,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1582174339}
-  - {fileID: 449404967}
+  - {fileID: 2042002072}
   - {fileID: 1965306893}
-  - {fileID: 1402491609}
+  - {fileID: 449404967}
   - {fileID: 209030667}
+  - {fileID: 1402491609}
   m_Father: {fileID: 1493474667}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65272,12 +65279,12 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.18
   m_Text: "Great job getting your basketball safely! \n\nYou did a really good job
-    looking left, right, and left again before crossing the street. \n\nIt's also
-    important to make eye contact with drivers before crossing where cars might not
-    see you behind parked cars. \r\n\r\n\u202FJust remember, when you're crossing
-    the street not at a crosswalk or stoplight, cars don't have to stop for you.
-    \n\nSo always be extra careful and make sure it's safe before crossing! \n\n\nFeel
-    free to close the application."
+    <color=red>looking left, right, and left again</color> before crossing the street.
+    \n\nIt's also important to make <color=red>eye contact with drivers</color> before
+    crossing where cars might not see you behind parked cars. \r\n\r\n\u202FJust
+    remember, when you're crossing the street not at a crosswalk or stoplight, cars
+    don't have to stop for you. \n\nSo always be <color=red>extra careful</color>
+    and make sure it's safe before crossing! \n\n\nFeel free to close the application."
 --- !u!222 &1824724937
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -69197,7 +69204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: 115.32}
   m_SizeDelta: {x: 403, y: 304.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1965306894
@@ -69233,14 +69240,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: "The number 1 rule for your safety is to use an adjacent crosswalk when
-    you cross the street. If no crosswalk is available, you should follow the safety
-    procedure before crossing.\n\nHelp Hobbit get his basketball back safely. \n\nLook
-    out for cars: left, right, left again! \n\nMake eye contact with drivers and
-    give a big wave while crossing. \n\nFollow the signs and listen for clues. Use
-    the glowing rings to guide you.\n\nRemember, cars rule outside marked areas. 
-    \r\n\r\nHave a blast and stay safe in Hobbit's world!  \r\n\r\nPress the button
-    to start playing. "
+  m_Text: 'The number 1 rule for your safety is to <color=red>use an adjacent crosswalk</color>
+    when you cross the street. If no crosswalk is available, you should <color=red>follow
+    the safety procedure</color> before crossing.
+
+
+    Look out for cars: <color=red>left,
+    right, left again ! </color>
+
+    Make <color=red>eye contact with drivers</color>
+    and <color=red>give a big wave</color> while crossing. '
 --- !u!222 &1965306895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71779,6 +71788,81 @@ Transform:
   m_Father: {fileID: 847070458}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2042002071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042002072}
+  - component: {fileID: 2042002074}
+  - component: {fileID: 2042002073}
+  m_Layer: 5
+  m_Name: Background (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2042002072
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042002071}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 19}
+  m_LocalScale: {x: 3.929666, y: 2.9421399, z: 0.9592}
+  m_Children: []
+  m_Father: {fileID: 1746853427}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 115.6}
+  m_SizeDelta: {x: 115.6, y: 41}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2042002073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042002071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8627451, g: 0.8627451, b: 0.8627451, a: 0.8352941}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2042002074
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042002071}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2043755193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74507,7 +74591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.43921572, b: 0.3254902, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -74527,9 +74611,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1.84
-  m_Text: "This is still a little too close to the curb. \nYou can see a little better,
-    but it is still very\r hard for oncoming cars to see you.\nLet's see the point
-    of view of the incoming car."
+  m_Text: "This is still <color=red>a little too close</color> to the curb. \nYou
+    can see a little better, but it is still <color=red>very\r hard for oncoming
+    cars to see you</color>.\nLet's see the point of view of the incoming car."
 --- !u!222 &2118246410
 CanvasRenderer:
   m_ObjectHideFlags: 0
