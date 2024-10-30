@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -60,5 +61,10 @@ public class ButtonManager : MonoBehaviour
     public void endExperience()
     {
         Application.Quit();
+    }
+
+    public void RestartExperience()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
